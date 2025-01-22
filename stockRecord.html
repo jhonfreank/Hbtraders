@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.B Traders</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="stockRecord.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+          <p>logo</p>
+        </div>
+        <div>
+          <h1>H.B TRADERS</h1>
+        </div>
+        <div>
+            <a href="index.html">
+                <button class="menuBTN">Home</button>
+            </a>
+        </div>
+    </nav>
+<br>
+
+    <div class="displayStock">
+
+
+            <div>
+                <table id="googleSheetTable1" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Id Number</th>
+                            <th>Product Batch</th>
+                            <th>Date</th>
+                            <th>Company Name</th>
+                            <th>Product Type</th>
+                            <th>Color</th>
+                            <th>Thickness</th>
+                            <th>Number Of Stock</th>
+                            <th>Buying Price</th>
+                            <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated here dynamically -->
+                    </tbody>
+                </table>
+                <p id="sum"></p>
+            </div>
+        
+        
+        
+            <div class="addStocksrf" id="deleteContainersr">
+              
+              <center>
+                <h2 id="sid"> Are You Sure You want to Delete This?</h2>  
+                  <input type="num" id="didsrf" style="visibility: hidden;">
+                  <br>
+                  <br>
+                  <button class="clobtn" onclick="deleteData()">Delete</button>
+                <button class="addsrf" onclick="deletePopupclose()">Close</button>
+              </center>
+          </div>
+            
+        
+    </div>
+    <script src="menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="stockRecord.js"></script>
+
+
+</body>
+</html>

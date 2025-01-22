@@ -1,0 +1,46 @@
+.CompanyNameListDiv{
+    background-color: #e0caae;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+.ProductTypeListDiv{
+    background-color: #e0caae;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+.ColorListDiv{
+    background-color: #e0caae;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+.ThicknessListDiv{
+    background-color: #e0caae;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+.tableContainerPD button{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+.tableContainerPD{
+    display: flex;
+    width: fit-content;
+}
+.addPD{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 768px){
+    .tableContainerPD{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.B Traders</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="stockRecord.css">
+    <link rel="stylesheet" href="AddOption.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+          <p>logo</p>
+        </div>
+        <div>
+          <h1>H.B TRADERS</h1>
+        </div>
+        <div>
+            <a href="index.html">
+                <button class="menuBTN">Home</button>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <a href="addSellForm.html">
+    <button class="addsrf">Add Sell</button>
+    </a>    
+    <button id="Opensar" class="addsrf" onclick="openASF()">Add Stock</button>
+    <button class="addsrf" onclick="openCompanyName()">Add Company Name</button>
+    <button class="addsrf" onclick="openProductType()">Add Product Type</button>
+    <button class="addsrf" onclick="openColor()">Add Color</button>
+    <button class="addsrf" onclick="openThickness()">Add Thickness</button>
+
+
+    <div class="addStocksrf" id="addStock">
+        <h2 class="h2srf">Add Stock Record</h2>
+        <p id="wrongMessageasf"></p>
+        <label for="productBatch" class="srf">Product Batch</label>
+        <input type="number" id="productBatch" class="srf" required>
+        <label for="date" class="srf">Date</label>
+        <input type="date" id="date" class="srf" required>
+        <br>
+        <label for="copanyName" class="srf">Company Name</label>
+        <select id="copanyName" class="srf" required></select>
+        <label for="productType" class="srf">Product Type</label>
+        <select id="productType" class="srf" required></select>
+        <br>
+        <label for="color" class="srf">Color</label>
+        <select id="color" class="srf" required></select>
+        <label for="thickness" class="srf">Thickness</label>
+        <select id="thickness" class="srf" required></select>
+        <br>
+        <label for="numberofStock" class="srf">Number Of Stock</label>
+        <input type="number" id="numberofStock" class="srf" required>
+        <label for="buyingPrice" class="srf">Buying Price</label>
+        <input type="number" id="buyingPrice" class="srf" required>
+        <br>
+        <button class="clobtn" onclick="closeASF()">Close</button>
+        <button class="addsrf" onclick="addStock()">Add</button>
+
+    </div>
+    <div class="addProductDetails" id="addCompanyName">
+        <label for="ACNcompanyName">Company Name</label>
+        <input type="text" id="ACNcompanyName" placeholder="Company Name">
+        <br>
+        <button class="CloseBTNAO" onclick="closeCompanyName()">Close</button>
+        <button onclick="AddCompanyName()" class="addBTNAO">Submit</button>
+    </div>
+    <div id="addProductType" class="addProductDetails">
+        <label for="ACNProductType">Product Type</label>
+        <input type="text" id="ACNProductType" placeholder="Product Type">
+        <br>
+        <button class="CloseBTNAO" onclick="closeProductType()">Close</button>
+        <button onclick="AddProductType()" class="addBTNAO">Submit</button>
+    </div>
+    <div id="addColor" class="addProductDetails">
+        <label for="ACNColor">Color</label>
+        <input type="text" id="ACNColor" placeholder="Color">
+        <br>
+        <button class="CloseBTNAO" onclick="closeColor()">Close</button>
+        <button onclick="AddColor()" class="addBTNAO">Submit</button>
+    </div>
+    <div id="addThickness" class="addProductDetails">
+        <label for="ACNThickness">Thickness</label>
+        <input type="text" id="ACNThickness" placeholder="Thickness">
+        <br>
+        <button class="CloseBTNAO" onclick="closeThickness()">Close</button>
+        <button onclick="AddThickness()" class="addBTNAO">Submit</button>
+    </div>
+
+
+
+    <script src="menu.js"></script>
+    <script>
+                const API_URL2 = 'https://script.google.com/macros/s/AKfycbw_msZRyHCKROuUQDhGwLmX8Q70UuI3KAOmCKARLHKl8oiYkhDKcmjpccxMamI2b7gaxg/exec';
+
+
+const popupASF=document.getElementById('addStock');
+async function addStock(){
+    let productBatch=document.getElementById('productBatch').value;
+    let date=document.getElementById('date').value;
+    let copanyName=document.getElementById('copanyName').value;
+    let productType=document.getElementById('productType').value;
+    let color=document.getElementById('color').value;
+    let thickness=document.getElementById('thickness').value;
+    let numberofStock=document.getElementById('numberofStock').value;
+    let buyingPrice=document.getElementById('buyingPrice').value;
+
+
+    if(productBatch && date && copanyName && productType && color && thickness && numberofStock && buyingPrice){
+
+    
+    const response = await fetch(`${API_URL2}?action=create&productBatch=${productBatch}&date=${date}&copanyName=${copanyName}&productType=${productType}&color=${color}&thickness=${thickness}&numberofStock=${numberofStock}&buyingPrice=${buyingPrice}`);
+    const result = await response.text();
+    alert(result);
+    }
+    else{
+        document.getElementById('wrongMessageasf').innerHTML="Add all the data..."
+    }
+
+}
+
+
+function openASF(){
+    popupASF.classList.add("open-addStock");
+}
+function closeASF(){
+    popupASF.classList.remove("open-addStock")
+}
+const popUpCompanyName=document.getElementById('addCompanyName');
+const popupProductType=document.getElementById('addProductType');
+const popupColor=document.getElementById('addColor');
+const popupThickness=document.getElementById('addThickness');
+function openCompanyName(){
+    popUpCompanyName.classList.add("open-addProductDetails");
+}
+function closeCompanyName(){
+    popUpCompanyName.classList.remove("open-addProductDetails");
+}
+function openProductType(){
+    popupProductType.classList.add("open-addProductDetails");
+}
+function closeProductType(){
+    popupProductType.classList.remove("open-addProductDetails");
+}
+function openColor(){
+    popupColor.classList.add("open-addProductDetails");
+}
+function closeColor(){
+    popupColor.classList.remove("open-addProductDetails");
+}
+function openThickness(){
+    popupThickness.classList.add("open-addProductDetails");
+}
+function closeThickness(){
+    popupThickness.classList.remove("open-addProductDetails");
+}
+    </script>
+    <script src="companyName.js"></script>
+    <script src="productType.js"></script>
+    <script src="color.js"></script>
+    <script src="thickness.js"></script>
+   
+</body>
+</html>

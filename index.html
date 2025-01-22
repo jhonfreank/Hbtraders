@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.B Traders</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <p>logo</p>
+        </div>
+        <div>
+          <h1>H.B TRADERS</h1>
+        </div>
+        <div>
+            <a href="index.html">
+                <button class="menuBTN">Home</button>
+            </a>
+        </div>
+    </nav>
+    <div class="buttonsContainer">
+        <a href="sellingRecord.html">
+            <button class="menuBTN">Selling Record</button>          
+        </a>
+        <a href="stockRecord.html">
+            <button class="menuBTN">Stock Record</button>
+        </a>
+        <a href="productDetails.html">
+            <button class="menuBTN">Product Details</button>
+        </a>
+
+
+        <a href="AddOption.html">
+            <button class="menuBTN">Add Record</button>
+        </a>
+
+    </div>
+    <div class="container1">
+         <!--Quentity of Sell-->
+
+        <div class="totalSellingQuantityDetails" id="totalSellingQuantityDetails">
+            <center>
+            <h3>Quentity Of Sell</h3>
+            <table border="1">
+                <tr>
+                    <td colspan="2">
+                        <h5 class="searchHeader">Total Sell Quentity</h5>
+                    </td>
+                    <td>
+                        <button class="search" onclick="displayTotalSellQuentity()">Search</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="outputfield">
+                        <p id="DisplaytotalSellQuentity"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h5 class="searchHeader">Search Quentity by Month</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sqmonth">Month</label>
+                        <select id="sqmonth">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="sqyear">Year</label>
+                        <input type="number" placeholder="year" id="sqyear">
+                    </td>
+                    <td>
+                        <button class="search" onclick="displaysellquentityByMonth()">Search</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="outputfield">
+                        <p id="Displayquentityofsellbymonth"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h5 class="searchHeader">Search Quentity by Year</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="sqyear2">Year</label>
+                        <input type="number" id="sqyear2" placeholder="year">
+                    </td>
+                    <td>
+                        <button class="search" onclick="displaysellquentityByYear()">Search</button>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="3" class="outputfield">
+                        <p id="Displayquentityofsellbyyear"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h5 class="searchHeader">Search Sell Quentity by Date</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="sqbydate">Date</label>
+                        <input type="date" id="sqbydate">
+                    </td>
+                    <td>
+                        <button class="search" onclick="displaysellquentityByDate()">Search</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="outputfield">
+                        <p id="Displayquentityofsellbydate"></p>
+                    </td>
+                </tr>
+            </table>
+
+        </center>
+        
+        </div>
+
+        <!--End quentity of sell-->
+
+        <div id="dueDetails" class="dueDetails">
+            <center>
+                <h3>Due Details</h3>
+                <table border="1">
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="searchHeader">Total Due</h5>
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayTotalDue()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayTotalDue"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Due by Month</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="sdmonth">Month</label>
+                            <select id="sdmonth">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="sdyear">Year</label>
+                            <input type="number" placeholder="year" id="sdyear">
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayDueByMonth()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayDuebymonth"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Due by Year</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="sdyear2">Year</label>
+                            <input type="number" id="sdyear2" placeholder="year">
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayDueByYear()">Search</button>
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayDuebyyear"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Due by Date</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="sdbydate">Date</label>
+                            <input type="date" id="sdbydate">
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayDueByDate()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayDuebydate"></p>
+                        </td>
+                    </tr>
+                </table>
+    
+            </center>
+        </div>
+        <div id="totalProfitDetails" class="totalProfitDetails">
+            <center>
+                <h3>Profit Details</h3>
+                <table border="1">
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="searchHeader">Total Profit</h5>
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayTotalProfit()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displaytotalProfit"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Profit by Month</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="spmonth">Month</label>
+                            <select id="spmonth">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="spyear">Year</label>
+                            <input type="number" placeholder="year" id="spyear">
+                        </td>
+                        <td>
+                            <button class="search" onclick=" displayProfitByMonth()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayProfitbymonth"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Profit by Year</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="spyear2">Year</label>
+                            <input type="number" id="spyear2" placeholder="year">
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayProfitByYear()">Search</button>
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayProfitbyyear"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h5 class="searchHeader">Search Profit by Date</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="spbyDate">Date</label>
+                            <input type="date" id="spbyDate">
+                        </td>
+                        <td>
+                            <button class="search" onclick="displayProfitByDate()">Search</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="outputfield">
+                            <p id="displayProfitbyDate"></p>
+                        </td>
+                    </tr>
+                </table>
+    
+            </center>
+        </div>
+    </div>
+    <div class="container2">
+        <center>
+        <div class="stockManagementdiv">
+            <h3>Stock Management</h3>
+            <table border="1">
+                <tr>
+                    <td colspan="4">
+                        <h5>Total Current Stock</h5>
+                    </td>
+                    <td>
+                        <button class="search" onclick="totalCurrentStock()">Search</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                       <p id="outputTotalCurrentStock" class="outputfield"></p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <h5>
+                            Search Current Stock By Thickness
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ssByThicknessCompanyName">Company Name</label>
+                        <select id="ssByThicknessCompanyName"></select>
+                    </td>
+                    <td>
+                        <label for="ssByThicknessProductType">Product Type</label>
+                        <select id="ssByThicknessProductType"></select>
+                    </td>
+                    <td>
+                        <label for="ssByThicknesscolor">Color</label>
+                        <select id="ssByThicknesscolor"></select>
+                    </td>
+                    <td>
+                        <label for="ssByThicknessThickness">Thickness</label>
+                        <select id="ssByThicknessThickness"></select>
+                    </td>
+                    <td>
+                        <Button class="search" onclick="currentStockByThickness()">Search</Button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p id="outputTotalCurrentStockByThickness" class="outputfield"></p> 
+                    </td>
+                    <td>
+                        <button class="ssdetails" onclick="openStockDetails()">Details</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </div>
+    <div class="currentStockDetails" id="currentStockDetails">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Batch No.</th>
+                    <th>Company Name</th>
+                    <th>Product Type</th>
+                    <th>Color</th>
+                    <th>Thickness</th>
+                    <th>Number Of Stock</th>
+                    <th>Buying Price</th>
+                </tr>
+            </thead>
+            <tbody id="currentStockDetailsDisplayField">
+            </tbody>
+        </table>
+        <button onclick="closeStockDetails()" class="sdcloseBTN">Close</button>
+    </div>
+
+
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

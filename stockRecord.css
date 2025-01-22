@@ -1,0 +1,50 @@
+.addStocksrf{
+    background-color: rgb(14, 14, 11);
+    border-radius: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    color: white;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-addStock{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.srf{
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.addsrf{
+    background-color: green;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.h2srf{
+    text-align: center;
+    padding-top: 20px;
+    color: chocolate;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.clobtn{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}

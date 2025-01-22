@@ -1,0 +1,91 @@
+table{
+    background-color: #e0caae;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+.totalSellingQuantityDetails{
+    border: solid;
+    padding: 15px;
+    margin: 5px;
+
+}
+.search{
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+}
+.outputfield{
+    background-color: rgb(48, 47, 47);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.dueDetails{
+    border: solid;
+    margin: 5px;
+    padding: 15px;
+}
+.totalProfitDetails{
+    border: solid;
+    margin: 5px;
+    padding: 15px;
+}
+.container1{
+    display: flex;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 780px){
+    .container1{
+        flex-direction: column;
+    }
+}
+
+.container2{
+    padding: 15px;
+    border: solid;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.ssdetails{
+    background-color: goldenrod;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+.currentStockDetails{
+    border-radius: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    background-color: #e0caae;
+    padding-top: 30px;
+    border: solid;
+    border-color: red;
+}
+.open-currentStockDetails{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.currentStockDetails table{
+    padding: 10px;
+}
+.sdcloseBTN{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}

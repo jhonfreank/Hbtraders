@@ -1,0 +1,65 @@
+body{
+  margin-bottom: 30px;
+}
+.details1{
+    width: 90%;
+    background-color: rgb(180, 89, 27);
+    border-radius: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #ffffff;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.cn{
+  position: fixed;
+  margin-top: 0%;
+  margin-left: 10px;
+}
+.dataSohow{
+  background-color: black;
+  width: auto;
+  text-align: center;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+}
+.titelList{
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+.closePopupBTN{
+  background-color: red;
+  padding: 5px;
+  margin-top: 5px;
+  color: white;
+  font-weight: bold;
+}
+.details11{
+  background-color: indianred;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.updatePopupBTN{
+  background-color: green;
+  margin-top: 5px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}

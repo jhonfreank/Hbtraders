@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.B Traders</title>
+    <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="sellingRecord.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <p>logo</p>
+    </div>
+    <div>
+      <h1>H.B TRADERS</h1>
+    </div>
+    <div>
+      <a href="index.html">
+          <button class="menuBTN">Home</button>
+      </a>
+  </div>
+</nav>
+
+<br>
+
+    <div>
+        <table id="googleSheetTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id Number</th>
+                    <th>Chalan Number</th>
+                    <th>Date</th>
+                    <th>Due</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here dynamically -->
+            </tbody>
+        </table>
+        <p id="sum"></p>
+    </div>
+
+
+    <div class="details1" id="details1">
+        <h3 id="sid"></h3>
+        <center>
+          <table  border="2">
+            <tr>
+              <td class="titelList">Chalan Number</td>
+              <td class="titelList">Date</td>
+            </tr>
+            <tr>
+              <td id="schalanNumber" class="dataSohow"></td>
+              <td id="sdate" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Customer Name</td>
+              <td class="titelList">Company Name</td>
+            </tr>
+            <tr>
+              <td id="scustomerName" class="dataSohow"></td>
+              <td id="scompanyName" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Product Type</td>
+              <td class="titelList">Color</td>
+            </tr>
+            <tr>
+              <td id="sproductType" class="dataSohow"></td>
+              <td id="scolor" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Thickness</td>
+              <td class="titelList">Number Of Product</td>
+            </tr>
+            <tr>
+              <td id="sthickness" class="dataSohow"></td>
+              <td id="snumberofProduct" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Stock Batch</td>
+              <td class="titelList">Buying Price</td>
+            </tr>
+            <tr>
+              <td id="sstockBatch" class="dataSohow"></td>
+              <td id="sbuyingPrice" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Selling Price</td>
+              <td class="titelList">Total Price</td>
+            </tr>
+            <tr>
+              <td id="ssellingPrice" class="dataSohow"></td>
+              <td id="stotalPrice" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList">Amount Collected</td>
+              <td class="titelList">Due</td>
+            </tr>
+            <tr>
+              <td id="samountCollected" class="dataSohow"></td>
+              <td id="sdue" class="dataSohow"></td>
+            </tr>
+            <tr>
+              <td class="titelList" colspan="2">Profit</td>
+            </tr>
+            <tr>
+              <td id="sprofit" class="dataSohow" colspan="2"></td>
+            </tr>
+          </table>
+          <button class="closePopupBTN" onclick="closeDetails1()">Close</button>
+          
+          
+        </center>
+    </div>
+
+
+    <div class="details1" id="updatesealingRecord">
+        <h3 id="sid"></h3>
+        <center>
+            <h2>Update Record</h2>
+            <label for="uid">Id Number</label>      
+            <input type="num" id="uid">
+            <br>
+            <br>
+            <label for="uamountCollected">Amount Collected</label>
+            <input type="number" id="uamountCollected" oninput="updateCalculation()">
+            <label for="udue">Due</label>
+            <input type="text" id="udue">
+            <br>
+            <input type="text" id="utotalprice" style="visibility: hidden;">
+            <br>
+           
+          <button class="closePopupBTN" onclick="closePopupU()">Close</button>
+          <button class="updatePopupBTN" onclick="updateData()">Update</button>
+        </center>
+    </div>
+
+
+    <div class="details1" id="deleteContainer">
+      
+      <center>
+        <h2 id="sid"> Are You Sure You want to Delete This?</h2>  
+          <input type="num" id="did" style="visibility: hidden;">
+          <br>
+          <br>
+          <button class="closePopupBTN" onclick="deleteData()">Delete</button>
+        <button class="updatePopupBTN" onclick="closePopupD()">Close</button>
+      </center>
+  </div>
+    
+  <script src="menu.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <!-- Your Script -->
+     <script src="sellingRecord.js"></script>
+     <script src="sellingRecordUpdate.js"></script>
+
+</body>
+</html>
